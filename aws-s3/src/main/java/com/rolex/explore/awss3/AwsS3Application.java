@@ -14,6 +14,7 @@ public class AwsS3Application {
 		System.out.println("Hello, how are you?");
 		AwsService awsService = appContext.getBean(AwsService.class);
 		awsService.getAllS3Buckets();
+		awsService.writeObject();
 		System.out.println("I am good.");
 	}
 }
