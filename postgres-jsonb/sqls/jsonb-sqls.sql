@@ -20,7 +20,7 @@ insert into users.details values(10012, '{"name":"Lily Doe", "age": "15", "city"
 insert into users.details values(10013, '{"name":"Mathew Doe", "age": "29", "city" : "Des Plaines", "zipcode":"60016", "socialMedia" : ["Twitter","Snapchat"]}');
 insert into users.details values(10014, '{"name":"Nolan Doe", "age": "23", "city" : "Rolling Meadows", "zipcode":"60008", "socialMedia" : ["Facebook"]}');
 
-
+--query using containment operator - @>
 select * from users.details where dtls @> '{"city":"Hoffman Estates"}';
 
 select * from users.details where dtls @> '{"city" : "Hoffman Estates", "zipcode":"60169"}'
@@ -30,6 +30,7 @@ select dtls->>'name' from users.details where dtls @> '{"city" : "Hoffman Estate
 
 select dtls @>  from users.details where dtls @> '{"city" : "Hoffman Estates", "zipcode":"60169"}'
 
+--select using ->> operators
 select * from users.details where dtls ->>'city'='Hoffman Estates' and dtls->>'zipcode'='60179'
 
 select * from users.details where dtls @> '{"country" : {"countryCode" : "US"}}';
@@ -39,7 +40,7 @@ select * from users.details where dtls -> 'country' ->> 'countryCode' = 'US';
 --select when specific column is not null
 select * from users.details where dtls->'country'->>'countryCode' is not null;
 
---select when specific column is not null
+--select when specific column is null
 select * from users.details where dtls->'country'->>'countryCode' is null;
 
 --select from mulitple values using in clause
