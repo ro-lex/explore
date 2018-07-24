@@ -1,14 +1,14 @@
 package com.rolex.explore.springautoconfiguration;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 //@SpringBootApplication
 @ComponentScan(basePackages = "com.rolex.explore.springautoconfiguration")
-@EnableWebMvc
+@SpringBootConfiguration
 @EnableAutoConfiguration
 //@EnableAutoConfiguration(excludeName = "com.rolex.explore.customstarter.config.CustomAutoConfiguration")
 public class SpringAutoconfigurationApplication {
