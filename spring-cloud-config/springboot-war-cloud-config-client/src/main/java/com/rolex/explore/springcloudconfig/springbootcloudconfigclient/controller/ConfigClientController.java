@@ -16,6 +16,6 @@ public class ConfigClientController {
 	
 	@RequestMapping(path = "/configs/applications/one", method = RequestMethod.GET)
 	public String getApplicationConfig() {
-		return "Config as seen on client: " + propertyValue;
+		return "Config as seen on client deployable on Tomcat: " + propertyValue;
 	}
 }
