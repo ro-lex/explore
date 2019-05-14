@@ -8,8 +8,8 @@ public class BitwiseOr {
 		int value = 0x0F0F;
 		System.out.println(bitmask | value); // prints 65535
 
-		byte bitmask1 = (byte)0xF0;
-		byte value1 = (byte)0x0F;
+		byte bitmask1 = (byte) 0xF0;
+		byte value1 = (byte) 0x0F;
 		System.out.println(bitmask1 | value1); // prints -1
 
 	}

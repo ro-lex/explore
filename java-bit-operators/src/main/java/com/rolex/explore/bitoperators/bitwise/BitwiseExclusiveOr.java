@@ -8,11 +8,11 @@ public class BitwiseExclusiveOr {
 		int bitmask = 0xF0F0;
 		int value = 0x0000;
 		System.out.println(bitmask ^ value); // Prints 0xF0F0 = 61680
-		
+
 		bitmask = 0xF0F0;
 		value = 0x0F0F;
 		System.out.println(bitmask ^ value); // Prints 0xFFFF = 65535
-		
+
 		bitmask = 0xF0F0;
 		value = 0xF0F0;
 		System.out.println(bitmask ^ value); // Prints 0
