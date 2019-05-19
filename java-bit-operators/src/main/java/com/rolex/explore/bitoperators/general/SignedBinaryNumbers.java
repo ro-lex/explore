@@ -1,4 +1,4 @@
-package com.rolex.explore.bitoperators.bitwise;
+package com.rolex.explore.bitoperators.general;
 
 public class SignedBinaryNumbers {
 
